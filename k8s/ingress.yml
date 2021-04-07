@@ -4,7 +4,7 @@ metadata:
   name: threesixtyallround-webingress
 spec:
   rules:
-  - host: 360allround.com
+  - host: '*.360allround.com'
     http:
       paths:
       - path: /
