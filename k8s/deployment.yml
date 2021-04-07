@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 360allround-web
+  labels:
+    app: 360allround-web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: 360allround-web
+  template:
+    metadata:
+      labels:
+        app: 360allround-web
+    spec:
+      containers:
+      - name: 360allround-web
+        image: kaijehenstra/360allround
+        ports:
+        - containerPort: 80

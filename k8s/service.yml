@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: 360allround-webservice
+spec:
+  selector:
+    app: 360allround-web
+  ports:
+    - port: 80 # Default port for image
