@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: threesixtyallround-web
-        image: kaijehenstra/threesixtyallround
+        image: hlads/threesixtyallround
         ports:
         - containerPort: 80
