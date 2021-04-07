@@ -3,8 +3,12 @@ kind: Ingress
 metadata:
   name: threesixtyallround-webingress
 spec:
+  tls:
+  - hosts:
+    - 360allround.com
+    secretName: threesixtyallround-webtls
   rules:
-  - host: '*.360allround.com'
+  - host: 360allround.com
     http:
       paths:
       - path: /
