@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: 360allround-webservice
+  name: threesixtyallround-webservice
 spec:
   selector:
-    app: 360allround-web
+    app: threesixtyallround-web
   ports:
     - port: 80 # Default port for image

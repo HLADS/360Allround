@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: 360allround-webingress
+  name: threesixtyallround-webingress
 spec:
   rules:
   - host: 360allround.com
@@ -11,6 +11,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: 360allround-webservice
+            name: threesixtyallround-webservice
             port:
               number: 80
