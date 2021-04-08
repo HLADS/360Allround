@@ -17,5 +17,6 @@ spec:
       containers:
       - name: threesixtyallround-web
         image: hlads/threesixtyallround
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
