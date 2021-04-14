@@ -1,12 +1,12 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: threesixtyallround-webcert
-  namespace: default
+  name: threesixtyallround-web-cert
+  namespace: threesixtyallround-web-ns
 spec:
   dnsNames:
     - 360allround.com
-  secretName: threesixtyallround-webtls
+  secretName: threesixtyallround-web-tls
   issuerRef:
     name: letsencrypt-cluster-issuer
     kind: ClusterIssuer

@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: threesixtyallround-web
+  namespace: threesixtyallround-web-ns
   labels:
     app: threesixtyallround-web
 spec:
