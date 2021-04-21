@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: threesixtyallround-web
-        image: hlads/threesixtyallround
+        image: hlads/threesixtyallround:0.0.1
         imagePullPolicy: Always
         resources:
           requests:
