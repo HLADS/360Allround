@@ -24,7 +24,7 @@ spec:
           env:
             - name: WORDPRESS_DB_HOST
               value: myvizionclu01-ams3-vtgate-80fc1025-588fd775db-n875v
-            - name: WORDPRESS_DB_DATABASE
+            - name: WORDPRESS_DB_NAME
               value: threesixtyallround
             - name: WORDPRESS_DB_USER
               value: user
