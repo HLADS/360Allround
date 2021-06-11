@@ -23,7 +23,7 @@ spec:
           name: wordpress
           env:
             - name: WORDPRESS_DB_HOST
-              value: myvizionclu01-ams3-vtgate-80fc1025-588fd775db-n875v
+              value: myvizionclu01-ams3-vtgate-80fc1025-5765d9cc9f-78cd4
             - name: WORDPRESS_DB_NAME
               value: threesixtyallround
             - name: WORDPRESS_DB_USER
