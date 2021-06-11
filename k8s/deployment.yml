@@ -46,4 +46,4 @@ spec:
       volumes:
         - name: wordpress-persistent-storage
           persistentVolumeClaim:
-            claimName: wp-pv-claim
+            claimName: threesixtyallround-wp-pv-claim
