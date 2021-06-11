@@ -1,29 +1,35 @@
-apiVersion: apps/v1
+apiVersion: apps/v1   # versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: threesixtyallround-web
-  namespace: threesixtyallround-web-ns
+  name: threesixtyallround-wp
   labels:
-    app: threesixtyallround-web
+    app: threesixtyallround-wp
+  namespace: threesixtyallround-web-ns
 spec:
-  strategy:
-    rollingUpdate:
-      maxSurge: 30%
-      maxUnavailable: 0
-    type: RollingUpdate
-  replicas: 1
   selector:
     matchLabels:
-      app: threesixtyallround-web
+      app: threesixtyallround-wp
+      tier: frontend
+  strategy:
+    type: Recreate
   template:
     metadata:
       labels:
-        app: threesixtyallround-web
+        app: threesixtyallround-wp
+        tier: frontend
     spec:
       containers:
-      - name: threesixtyallround-web
-        image: hlads/threesixtyallround
-        imagePullPolicy: Always
+        - image: wordpress:latest
+          name: wordpress
+          env:
+            - name: WORDPRESS_DB_HOST
+              value: threesixtyallroundclu01
+            - name: WORDPRESS_DB_DATABASE
+              value: threesixtyallround
+            - name: WORDPRESS_DB_USER
+              value: user
+            - name: WORDPRESS_DB_PASSWORD
+              value: ""
         resources:
           requests:
             memory: "100Mi"
@@ -31,5 +37,13 @@ spec:
           limits:
             memory: "350Mi"
             cpu: "250m"
-        ports:
-        - containerPort: 80
+          ports:
+            - containerPort: 80
+              name: wordpress
+          volumeMounts:
+            - name: wordpress-persistent-storage
+              mountPath: /var/www/html
+      volumes:
+        - name: wordpress-persistent-storage
+          persistentVolumeClaim:
+            claimName: wp-pv-claim
