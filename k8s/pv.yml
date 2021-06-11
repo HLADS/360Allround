@@ -4,6 +4,7 @@ metadata:
   name: threesixtyallround-wp-pv-claim
   labels:
     app: threesixtyallround-wp
+  namespace: threesixtyallround-web-ns
 spec:
   accessModes:
     - ReadWriteOnce
