@@ -23,7 +23,7 @@ spec:
           name: wordpress
           env:
             - name: WORDPRESS_DB_HOST
-              value: 10.245.130.160
+              value: 10.245.120.72
             - name: WORDPRESS_DB_NAME
               value: threesixtyallround
             - name: WORDPRESS_DB_USER
