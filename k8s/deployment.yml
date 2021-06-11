@@ -27,9 +27,9 @@ spec:
             - name: WORDPRESS_DB_NAME
               value: threesixtyallround
             - name: WORDPRESS_DB_USER
-              value: threesixty
+              value: user
             - name: WORDPRESS_DB_PASSWORD
-              value: XQmBuDY3bZ5i
+              value: ""
           ports:
             - containerPort: 80
               name: wordpress
