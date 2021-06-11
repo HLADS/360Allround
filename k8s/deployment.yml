@@ -30,16 +30,16 @@ spec:
               value: user
             - name: WORDPRESS_DB_PASSWORD
               value: ""
-        resources:
-          requests:
-            memory: "100Mi"
-            cpu: "10m"
-          limits:
-            memory: "350Mi"
-            cpu: "250m"
           ports:
             - containerPort: 80
               name: wordpress
+          resources:
+            requests:
+              memory: "100Mi"
+              cpu: "10m"
+            limits:
+              memory: "350Mi"
+              cpu: "250m"
           volumeMounts:
             - name: wordpress-persistent-storage
               mountPath: /var/www/html
